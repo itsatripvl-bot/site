@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Оранжевая искра">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd84a" />
+      <stop offset="50%" stop-color="#ffb347" />
+      <stop offset="100%" stop-color="#ff7b2f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" fill="#0a0f1c" rx="12" />
+  <path fill="url(#g)" d="M32 6c2 6 6.4 12.3 11.2 17.1S54 33 58 36c-5.4.8-11.5 4.1-16.3 8.9C36.9 49.7 34 55.6 32 60c-2-4.4-4.9-10.3-9.7-15.1C17.5 40.1 11.4 36.8 6 36c4-3 10.8-8.9 14.8-12.9C26 18.3 30 12 32 6Z" />
+  <circle cx="32" cy="32" r="6" fill="#ffe7a1" opacity="0.9" />
+</svg>

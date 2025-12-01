@@ -47,9 +47,50 @@ a:hover {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 72px 0 96px;
+  padding: 108px 0 96px;
   background: radial-gradient(circle at 50% 90%, rgba(255, 179, 71, 0.18), transparent 35%),
     linear-gradient(180deg, #050816 0%, #1a1024 85%);
+}
+
+.nav {
+  position: absolute;
+  inset: 0 0 auto 0;
+  padding: 18px 0;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(5, 8, 22, 0.75), rgba(5, 8, 22, 0));
+  backdrop-filter: blur(6px);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.nav__brand {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--warm-ivory);
+}
+
+.nav__links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav__links a {
+  color: var(--warm-ivory-2);
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav__links a:hover {
+  color: var(--glow-gold);
+  background: rgba(255, 220, 122, 0.08);
 }
 
 .hero__bg::before,
@@ -302,6 +343,27 @@ h3 {
   border-radius: var(--radius-sm);
 }
 
+.button--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--warm-ivory);
+}
+
+.button--link .icon {
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.button--link:hover .icon {
+  transform: translateY(-2px);
+  fill: var(--glow-gold);
+}
+
 .cards {
   display: grid;
   gap: 20px;
@@ -502,7 +564,7 @@ h3 {
 
 @media (max-width: 720px) {
   .hero {
-    padding: 64px 0;
+    padding: 96px 0 72px;
   }
 
   .card--image,
@@ -512,5 +574,15 @@ h3 {
 
   .subscribe-form {
     grid-template-columns: 1fr;
+  }
+
+  .nav__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__links {
+    width: 100%;
+    gap: 10px;
   }
 }
