@@ -481,6 +481,7 @@ h3 {
   display: grid;
   gap: 16px;
   margin: 24px 0;
+  position: relative;
 }
 
 .timeline__item {
@@ -506,6 +507,61 @@ h3 {
 .support-card h3,
 .timeline__item p {
   margin-top: 0;
+}
+
+@media (min-width: 960px) {
+  .timeline {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 20px 28px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    inset: 6px 50% 6px auto;
+    width: 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 220, 122, 0.35) 0%,
+      rgba(255, 220, 122, 0.12) 50%,
+      rgba(255, 220, 122, 0.35) 100%
+    );
+    transform: translateX(-1px);
+    border-radius: 999px;
+  }
+
+  .timeline__item {
+    padding: 18px 22px;
+    max-width: 520px;
+  }
+
+  .timeline__item::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--midnight);
+    border: 2px solid rgba(255, 220, 122, 0.7);
+    box-shadow: 0 0 0 4px rgba(255, 220, 122, 0.08);
+  }
+
+  .timeline__item:nth-child(odd) {
+    margin-right: 26px;
+  }
+
+  .timeline__item:nth-child(odd)::after {
+    right: -32px;
+  }
+
+  .timeline__item:nth-child(even) {
+    margin-left: 26px;
+  }
+
+  .timeline__item:nth-child(even)::after {
+    left: -32px;
+  }
 }
 
 .visual-block,
