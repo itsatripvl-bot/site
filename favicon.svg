@@ -1,12 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Оранжевая искра">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Оранжевая искра в фирменных цветах">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffd84a" />
-      <stop offset="50%" stop-color="#ffb347" />
-      <stop offset="100%" stop-color="#ff7b2f" />
+    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc5c" />
+      <stop offset="55%" stop-color="#ff9b42" />
+      <stop offset="100%" stop-color="#ffd84a" />
     </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ffcc5c" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#ff9b42" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#050816" stop-opacity="0" />
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" />
+    </filter>
   </defs>
-  <rect width="64" height="64" fill="#0a0f1c" rx="12" />
-  <path fill="url(#g)" d="M32 6c2 6 6.4 12.3 11.2 17.1S54 33 58 36c-5.4.8-11.5 4.1-16.3 8.9C36.9 49.7 34 55.6 32 60c-2-4.4-4.9-10.3-9.7-15.1C17.5 40.1 11.4 36.8 6 36c4-3 10.8-8.9 14.8-12.9C26 18.3 30 12 32 6Z" />
-  <circle cx="32" cy="32" r="6" fill="#ffe7a1" opacity="0.9" />
+  <rect width="64" height="64" rx="12" fill="#050816" />
+  <circle cx="32" cy="30" r="18" fill="url(#glow)" />
+  <path
+    d="M32 5.5 36.6 22l15.4 7-15.4 7.3L32 58.5l-4.6-22.2L12 29l15.4-7Z"
+    fill="url(#spark)"
+    stroke="#fff4d7"
+    stroke-width="1.2"
+    stroke-opacity="0.35"
+    filter="url(#soft)"
+  />
+  <g fill="#ffd84a" opacity="0.9">
+    <circle cx="14" cy="20" r="1.6" />
+    <circle cx="50" cy="18" r="1.2" />
+    <circle cx="48" cy="44" r="1.4" />
+    <circle cx="18" cy="46" r="1.1" />
+  </g>
 </svg>
