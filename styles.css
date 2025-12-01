@@ -34,6 +34,7 @@ body {
 p {
   margin: 0 0 18px;
   color: var(--warm-ivory);
+  max-width: 72ch;
 }
 
 h1,
@@ -475,6 +476,7 @@ h2 {
   position: relative;
   padding-left: 26px;
   color: var(--warm-ivory);
+  max-width: 72ch;
 }
 
 .list__item::before {
