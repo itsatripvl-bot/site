@@ -141,6 +141,18 @@ a:hover {
 .spark--26 { left: 86%; top: 78%; --spark-duration: 12.4s; --spark-delay: -2.9s; }
 .spark--27 { left: 92%; top: 34%; --spark-duration: 11.1s; --spark-delay: -6.2s; }
 .spark--28 { left: 40%; top: 8%; --spark-duration: 9.4s; --spark-delay: -4.8s; }
+.spark--29 { left: 4%; top: 12%; --spark-duration: 10.5s; --spark-delay: -3.3s; }
+.spark--30 { left: 12%; top: 26%; --spark-duration: 12.9s; --spark-delay: -5.6s; }
+.spark--31 { left: 22%; top: 6%; --spark-duration: 9.2s; --spark-delay: -2.4s; }
+.spark--32 { left: 34%; top: 20%; --spark-duration: 11.8s; --spark-delay: -6.1s; }
+.spark--33 { left: 50%; top: 10%; --spark-duration: 10.1s; --spark-delay: -3.9s; }
+.spark--34 { left: 62%; top: 14%; --spark-duration: 12.1s; --spark-delay: -5.3s; }
+.spark--35 { left: 74%; top: 4%; --spark-duration: 9.7s; --spark-delay: -4.6s; }
+.spark--36 { left: 88%; top: 18%; --spark-duration: 10.9s; --spark-delay: -2.1s; }
+.spark--37 { left: 8%; top: 60%; --spark-duration: 11.5s; --spark-delay: -7.4s; }
+.spark--38 { left: 24%; top: 56%; --spark-duration: 12.7s; --spark-delay: -4.2s; }
+.spark--39 { left: 56%; top: 60%; --spark-duration: 10.6s; --spark-delay: -6.6s; }
+.spark--40 { left: 88%; top: 56%; --spark-duration: 11.4s; --spark-delay: -3.5s; }
 
 @keyframes spark-float {
   0% {
@@ -755,6 +767,26 @@ h2 {
 @media (max-width: 720px) {
   .hero {
     padding: 96px 0 72px;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__visual {
+    order: 1;
+  }
+
+  .hero__text {
+    order: 2;
+    align-items: center;
+  }
+
+  .hero__cta {
+    justify-content: center;
   }
 
   .card--image,
