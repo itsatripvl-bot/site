@@ -556,104 +556,88 @@ h2 {
 .timeline {
   position: relative;
   display: grid;
-  gap: 16px;
+  gap: 18px;
   margin: 26px 0;
-  padding-left: 10px;
+  padding-left: 14px;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 34px;
-  top: 0;
-  bottom: 0;
+  inset: 8px auto 0 6px;
   width: 2px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 220, 122, 0.32) 0%,
-    rgba(255, 220, 122, 0.12) 40%,
-    rgba(255, 220, 122, 0.32) 100%
-  );
+  background: linear-gradient(180deg, rgba(255, 220, 122, 0.45), rgba(255, 220, 122, 0));
   border-radius: 999px;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .timeline__item {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 220, 122, 0.12), rgba(24, 27, 34, 0.92));
+  background: rgba(22, 24, 34, 0.94);
   border-radius: var(--radius);
-  padding: 18px 18px 18px 86px;
-  border: 1px solid rgba(255, 220, 122, 0.22);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  padding: 16px 18px 16px 32px;
+  border: 1px solid rgba(255, 220, 122, 0.18);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
   display: grid;
   gap: 10px;
-  overflow: hidden;
-  transition: transform 0.18s ease, border-color 0.18s ease;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
 }
 
-.timeline__item::after {
+.timeline__item::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 30%, rgba(255, 216, 74, 0.18), transparent 52%);
-  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: 2px solid var(--dandelion);
+  background: var(--deep-asphalt);
+  left: -13px;
+  top: 20px;
+  box-shadow: 0 0 0 6px rgba(255, 220, 122, 0.08);
 }
 
 .timeline__item:hover {
-  border-color: rgba(255, 220, 122, 0.36);
-  transform: translateY(-1px);
-  transition: transform 0.18s ease, border-color 0.18s ease;
+  border-color: rgba(255, 220, 122, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.34);
 }
 
-.timeline__marker {
-  position: absolute;
-  left: 7px;
-  top: 14px;
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background: rgba(10, 12, 20, 0.92);
-  border: 1px solid rgba(255, 220, 122, 0.32);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), 0 0 12px rgba(255, 204, 92, 0.12);
-  display: inline-flex;
+.timeline__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   align-items: center;
-  justify-content: center;
-  z-index: 1;
+  justify-content: space-between;
 }
 
 .timeline__year {
   color: var(--warm-ivory);
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.timeline__content {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 8px;
-}
-
-.timeline__label {
+.timeline__pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 220, 122, 0.32);
+  background: rgba(255, 220, 122, 0.08);
   color: var(--dandelion);
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 13px;
-  font-weight: 700;
 }
 
-.timeline__label::before {
-  content: "✺";
-  font-size: 12px;
-  transform: translateY(-1px);
-}
-
-.support-card h3,
 .timeline__item p {
+  color: var(--warm-ivory-2);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.support-card h3 {
   margin-top: 0;
 }
 
