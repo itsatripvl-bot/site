@@ -292,11 +292,11 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .section__grid--reverse {
-  align-items: center;
+  align-items: stretch;
 }
 
 .eyebrow {
@@ -461,6 +461,8 @@ h2 {
   min-height: 240px;
   border: 1px solid rgba(255, 220, 122, 0.14);
   box-shadow: var(--shadow);
+  width: 100%;
+  height: 100%;
 }
 
 .visual-block--dandelion {
@@ -469,8 +471,7 @@ h2 {
 }
 
 .visual-block--photo {
-  background: linear-gradient(160deg, rgba(5, 8, 22, 0.7), rgba(24, 27, 34, 0.65)),
-    url('img/two.jpeg') center/cover;
+  background: url('img/two.jpeg') center/cover;
   aspect-ratio: 3 / 4;
   max-width: 420px;
   min-height: 360px;
@@ -659,6 +660,27 @@ h2 {
   inset: 0;
   background: radial-gradient(circle at 30% 70%, rgba(255, 216, 74, 0.18), transparent 50%);
   pointer-events: none;
+}
+
+.visual-block--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(5, 8, 22, 0.7), rgba(24, 27, 34, 0.65));
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .visual-block--photo:hover::before {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 720px), (hover: none) {
+  .visual-block--photo::before {
+    display: none;
+  }
 }
 
 .subscribe-form {
