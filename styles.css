@@ -471,6 +471,11 @@ h2 {
 .visual-block--photo {
   background: linear-gradient(160deg, rgba(5, 8, 22, 0.7), rgba(24, 27, 34, 0.65)),
     url('img/two.jpeg') center/cover;
+  aspect-ratio: 3 / 4;
+  max-width: 420px;
+  min-height: 360px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .card__body {
