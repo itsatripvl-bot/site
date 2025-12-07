@@ -463,6 +463,11 @@ h2 {
   box-shadow: var(--shadow);
 }
 
+.visual-block--dandelion {
+  background: linear-gradient(145deg, rgba(255, 220, 122, 0.08), rgba(5, 8, 22, 0.9)),
+    url('img/screen1.jpeg') center/cover;
+}
+
 .visual-block--photo {
   background: linear-gradient(160deg, rgba(5, 8, 22, 0.7), rgba(24, 27, 34, 0.65)),
     url('img/two.jpeg') center/cover;
