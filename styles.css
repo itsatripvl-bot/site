@@ -133,6 +133,14 @@ a:hover {
 .spark--18 { left: 64%; top: 74%; --spark-duration: 10.4s; --spark-delay: -2.5s; }
 .spark--19 { left: 78%; top: 68%; --spark-duration: 11.7s; --spark-delay: -4.1s; }
 .spark--20 { left: 90%; top: 62%; --spark-duration: 12.2s; --spark-delay: -6.9s; }
+.spark--21 { left: 6%; top: 38%; --spark-duration: 12.6s; --spark-delay: -5.9s; }
+.spark--22 { left: 14%; top: 82%; --spark-duration: 10.7s; --spark-delay: -4.3s; }
+.spark--23 { left: 32%; top: 78%; --spark-duration: 11.4s; --spark-delay: -7.1s; }
+.spark--24 { left: 52%; top: 82%; --spark-duration: 13.2s; --spark-delay: -3.6s; }
+.spark--25 { left: 70%; top: 86%; --spark-duration: 10.9s; --spark-delay: -5.4s; }
+.spark--26 { left: 86%; top: 78%; --spark-duration: 12.4s; --spark-delay: -2.9s; }
+.spark--27 { left: 92%; top: 34%; --spark-duration: 11.1s; --spark-delay: -6.2s; }
+.spark--28 { left: 40%; top: 8%; --spark-duration: 9.4s; --spark-delay: -4.8s; }
 
 @keyframes spark-float {
   0% {
@@ -253,7 +261,7 @@ a:hover {
   width: min(520px, 90vw);
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
-  background: linear-gradient(160deg, rgba(5, 8, 22, 0.6), rgba(26, 16, 36, 0.8)),
+  background: linear-gradient(160deg, rgba(5, 8, 22, 0.35), rgba(26, 16, 36, 0.55)),
     url('img/hero.jpeg') center/cover;
   box-shadow: var(--shadow), 0 0 30px rgba(255, 204, 92, 0.28);
   border: 1px solid rgba(255, 220, 122, 0.18);
